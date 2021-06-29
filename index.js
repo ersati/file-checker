@@ -9,6 +9,8 @@ input.addEventListener('change', () => {
   const fileString = input.value;
 
   const file = input.files[0];
+  const fileName = file.name;
+  const fileSizeByte = file.size;
   const dot = fileString.lastIndexOf('.');
   const slash = fileString.lastIndexOf('\\');
   const format = fileString.slice(dot, fileString.length);
