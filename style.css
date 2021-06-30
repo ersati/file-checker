@@ -1,3 +1,31 @@
-h1, h2 {
+h1,
+h2 {
   font-family: Lato;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  border: 1px solid red;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: white;
+  color: red;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+.button:hover {
+  border-color: white;
+  background-color: red;
+  color: white;
+}
+.last {
+  margin: 20px 0;
+  padding: 15px;
+}
+.last p {
+  padding: 5px;
 }
