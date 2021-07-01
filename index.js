@@ -16,15 +16,12 @@ div.appendChild(secondP);
 div.appendChild(thirdP);
 
 input.addEventListener('change', () => {
-  const fileString = input.value;
   const file = input.files[0];
   const fileName = file.name;
   const fileSizeByte = file.size;
   const sizeInMB = (fileSizeByte / (1024 * 1024)).toFixed(2);
-  const dot = fileString.lastIndexOf('.');
-  const format = fileString.slice(dot, fileString.length);
-  // const slash = fileString.lastIndexOf('\\');
-  // const name = fileString.slice(slash, dot);
+  const dot = fileName.lastIndexOf('.');
+  const format = fileName.slice(dot + 1, fileName.length);
 
   firstP.textContent = `Name of File: ${fileName}`;
   secondP.textContent = `Size of File ${sizeInMB}MB`;
